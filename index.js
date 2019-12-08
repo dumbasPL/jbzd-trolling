@@ -12,8 +12,7 @@ async function xd() {
                 };
                 console.log("sending from ip: " + options.headers['x-forwarded-for']);
                 request(options, function (error, response, body) {
-                    if (error) console.error(error.message);
-                    console.log("resault from ip: " + options.headers['x-forwarded-for'] + ": " + response.statusCode);
+                    console.log("resault from ip: " + options.headers['x-forwarded-for'] + ": " + (error ? error.message : response.statusCode));
                 });
                 await new Promise(resolve => setTimeout(resolve, 10));
             }
