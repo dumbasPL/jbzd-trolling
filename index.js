@@ -1,7 +1,7 @@
 var request = require("request");
 
 async function xd() {
-    var limit = 1000;
+    var limit = 30;
     var pending = 0;
     for (let i = 1; i < 100; i++) {
         for (let j = 1; j < 100; j++) {
@@ -11,7 +11,7 @@ async function xd() {
                         method: 'GET',
                         url: 'https://ceapa.cool/suggestions/',
                         qs: {like: '19'},
-                        headers: {'x-forwarded-for': "169." + i + "." + j + "." + k},
+                        headers: {'x-forwarded-for': "178." + i + "." + j + "." + k},
                     };
                     console.log("sending from ip: " + options.headers['x-forwarded-for']);
                     request(options, function (error, response) {
@@ -20,7 +20,7 @@ async function xd() {
                     });
                     pending++;
                 }
-                await new Promise(resolve => setTimeout(resolve, 10));
+                await new Promise(resolve => setTimeout(resolve, 100));
             }
         }
     }
