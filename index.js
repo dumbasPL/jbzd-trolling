@@ -8,7 +8,7 @@ async function xd() {
                     method: 'GET',
                     url: 'https://ceapa.cool/suggestions/',
                     qs: {like: '19'},
-                    headers: {'x-forwarded-for': "100." + i + "." + j + "." + k},
+                    headers: {'x-forwarded-for': "101." + i + "." + j + "." + k},
                 };
                 console.log("sending from ip: " + options.headers['x-forwarded-for']);
                 request(options, function (error, response, body) {
