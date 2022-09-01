@@ -18,9 +18,8 @@ async function xd() {
                         url: 'https://jbzd.com.pl/content/vote/1226483',
                         body: {for: 1},
                         json: true,
-                        headers: {'content-type': 'application/json'/*, 'x-forwarded-for': /*lir[iii % lir.length] + ":" +*/ /*xd_xd + "." + i + "." + j + "." + k*/},
-                        followRedirect: false,
-                        proxy: "185.229.236.193:8080"
+                        headers: {'content-type': 'application/json', 'x-forwarded-for': xd_xd + "." + i + "." + j + "." + k},
+                        followRedirect: false
                     };
                     console.log("s: " + options.headers['x-forwarded-for']);
                     request(options, function (error, response) {
